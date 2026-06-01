@@ -9,7 +9,7 @@ function Navbar({ selected, total }) {
                 <span className='breadcrumb-current'>{selected?.title}</span>
             </div>
             <div className='navbar-pills'>
-                <span className='nav-pill'>v1.0.0</span>
+                {/* <span className='nav-pill'>v1.0.0</span> */}
                 <span className='nav-pill green'>● {total} Sheets</span>
             </div>
         </div>
@@ -17,3 +17,5 @@ function Navbar({ selected, total }) {
 }
 
 export default Navbar
+
+
