@@ -1,0 +1,2046 @@
+[
+    {
+        "id": 1,
+        "title": "React",
+        "description": "Complete React.js interview and development cheatsheet",
+        "sections": [
+            {
+                "heading": "Create Component",
+                "code": "function App() { return <h1>Hello</h1> }"
+            },
+            {
+                "heading": "JSX",
+                "code": "const element = <h1>Hello JSX</h1>"
+            },
+            {
+                "heading": "Props",
+                "code": "function User({name}) { return <h1>{name}</h1> }"
+            },
+            {
+                "heading": "useState",
+                "code": "const [count, setCount] = useState(0)"
+            },
+            {
+                "heading": "useEffect",
+                "code": "useEffect(() => { console.log('mounted') }, [])"
+            },
+            {
+                "heading": "Conditional Rendering",
+                "code": "{isLogin ? <Home /> : <Login />}"
+            },
+            {
+                "heading": "List Rendering",
+                "code": "users.map(user => <h1 key={user.id}>{user.name}</h1>)"
+            },
+            {
+                "heading": "Event Handling",
+                "code": "<button onClick={handleClick}>Click</button>"
+            },
+            {
+                "heading": "Controlled Input",
+                "code": "<input value={name} onChange={(e)=>setName(e.target.value)} />"
+            },
+            {
+                "heading": "useRef",
+                "code": "const inputRef = useRef()"
+            },
+            {
+                "heading": "useMemo",
+                "code": "const value = useMemo(() => compute(data), [data])"
+            },
+            {
+                "heading": "useCallback",
+                "code": "const memoFn = useCallback(() => {}, [])"
+            },
+            {
+                "heading": "Context API",
+                "code": "const UserContext = createContext()"
+            },
+            {
+                "heading": "Custom Hook",
+                "code": "function useFetch(url) { }"
+            },
+            {
+                "heading": "React Router",
+                "code": "<Route path='/' element={<Home />} />"
+            },
+            {
+                "heading": "Dynamic Routing",
+                "code": "<Route path='/user/:id' element={<User />} />"
+            },
+            {
+                "heading": "Navigate",
+                "code": "const navigate = useNavigate()"
+            },
+            {
+                "heading": "Lazy Loading",
+                "code": "const Home = lazy(() => import('./Home'))"
+            },
+            {
+                "heading": "React.memo",
+                "code": "export default React.memo(Component)"
+            },
+            {
+                "heading": "useReducer",
+                "code": "const [state, dispatch] = useReducer(reducer, initialState)"
+            },
+            {
+                "heading": "Fragment",
+                "code": "<> <h1>Hello</h1> </>"
+            },
+            {
+                "heading": "Forms",
+                "code": "const handleSubmit = (e) => { e.preventDefault() }"
+            },
+            {
+                "heading": "API Fetch",
+                "code": "fetch('https://api.com/users').then(res => res.json())"
+            },
+            {
+                "heading": "Axios",
+                "code": "axios.get('/users')"
+            },
+            {
+                "heading": "Environment Variables",
+                "code": "import.meta.env.VITE_API_URL"
+            },
+            {
+                "heading": "Component Lifecycle",
+                "code": "Mount -> Update -> Unmount"
+            },
+            {
+                "heading": "Key Prop",
+                "code": "<li key={item.id}>{item.name}</li>"
+            },
+            {
+                "heading": "Lifting State Up",
+                "code": "Move shared state to parent component"
+            },
+            {
+                "heading": "Debouncing",
+                "code": "setTimeout(() => search(), 500)"
+            },
+            {
+                "heading": "React Folder Structure",
+                "code": "components/ pages/ hooks/ services/ context/"
+            },
+            {
+                "heading": "Performance Optimization",
+                "code": "useMemo + lazy loading + code splitting"
+            },
+            {
+                "heading": "Error Boundary",
+                "code": "class ErrorBoundary extends React.Component {}"
+            },
+            {
+                "heading": "Portal",
+                "code": "ReactDOM.createPortal(child, container)"
+            },
+            {
+                "heading": "forwardRef",
+                "code": "const Input = React.forwardRef((props, ref) => {})"
+            },
+            {
+                "heading": "useId",
+                "code": "const id = useId()"
+            },
+            {
+                "heading": "useTransition",
+                "code": "const [isPending, startTransition] = useTransition()"
+            },
+            {
+                "heading": "Suspense",
+                "code": "<Suspense fallback={<Loader />}><Home /></Suspense>"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "JavaScript",
+        "description": "Complete JavaScript interview and development cheatsheet",
+        "sections": [
+            {
+                "heading": "Variables",
+                "code": "let name = 'Sandeep'"
+            },
+            {
+                "heading": "Const",
+                "code": "const PI = 3.14"
+            },
+            {
+                "heading": "Arrow Function",
+                "code": "const add = (a,b) => a+b"
+            },
+            {
+                "heading": "Function Declaration",
+                "code": "function greet(){ return 'Hello' }"
+            },
+            {
+                "heading": "Function Expression",
+                "code": "const greet = function(){}"
+            },
+            {
+                "heading": "Template Literal",
+                "code": "`Hello ${name}`"
+            },
+            {
+                "heading": "Spread Operator",
+                "code": "const arr2 = [...arr1]"
+            },
+            {
+                "heading": "Destructuring",
+                "code": "const {name, age} = user"
+            },
+            {
+                "heading": "Array Map",
+                "code": "arr.map(item => item)"
+            },
+            {
+                "heading": "Filter",
+                "code": "arr.filter(item => item.active)"
+            },
+            {
+                "heading": "Reduce",
+                "code": "arr.reduce((a,b)=>a+b,0)"
+            },
+            {
+                "heading": "Promises",
+                "code": "new Promise((resolve,reject)=>{})"
+            },
+            {
+                "heading": "Async Await",
+                "code": "const data = await fetch(url)"
+            },
+            {
+                "heading": "Optional Chaining",
+                "code": "user?.address?.city"
+            },
+            {
+                "heading": "Nullish Coalescing",
+                "code": "const value = data ?? 'default'"
+            },
+            {
+                "heading": "Closures",
+                "code": "function outer(){ return function inner(){} }"
+            },
+            {
+                "heading": "Hoisting",
+                "code": "Variables and functions move to top"
+            },
+            {
+                "heading": "Debouncing",
+                "code": "setTimeout(() => search(), 500)"
+            },
+            {
+                "heading": "Local Storage",
+                "code": "localStorage.setItem('token',token)"
+            },
+            {
+                "heading": "Fetch API",
+                "code": "fetch('/api/users')"
+            },
+            {
+                "heading": "Array Find",
+                "code": "arr.find(item => item.id === id)"
+            },
+            {
+                "heading": "Array Some",
+                "code": "arr.some(item => item.active)"
+            },
+            {
+                "heading": "Array Every",
+                "code": "arr.every(item => item.valid)"
+            },
+            {
+                "heading": "Object Keys",
+                "code": "Object.keys(obj)"
+            },
+            {
+                "heading": "Object Entries",
+                "code": "Object.entries(obj)"
+            },
+            {
+                "heading": "Object Assign",
+                "code": "Object.assign({}, obj1, obj2)"
+            },
+            {
+                "heading": "Array Flat",
+                "code": "arr.flat(Infinity)"
+            },
+            {
+                "heading": "Set",
+                "code": "const unique = [...new Set(arr)]"
+            },
+            {
+                "heading": "Map Object",
+                "code": "const map = new Map()"
+            },
+            {
+                "heading": "Symbol",
+                "code": "const id = Symbol('id')"
+            },
+            {
+                "heading": "Prototype",
+                "code": "User.prototype.greet = function(){}"
+            },
+            {
+                "heading": "Class",
+                "code": "class User { constructor(name){} }"
+            },
+            {
+                "heading": "Inheritance",
+                "code": "class Admin extends User {}"
+            },
+            {
+                "heading": "Getter Setter",
+                "code": "get name(){ return this._name }"
+            },
+            {
+                "heading": "Try Catch",
+                "code": "try { } catch(err) { }"
+            },
+            {
+                "heading": "Throw Error",
+                "code": "throw new Error('message')"
+            },
+            {
+                "heading": "Event Loop",
+                "code": "Call Stack -> Web APIs -> Callback Queue"
+            },
+            {
+                "heading": "setTimeout",
+                "code": "setTimeout(() => {}, 1000)"
+            },
+            {
+                "heading": "setInterval",
+                "code": "setInterval(() => {}, 1000)"
+            },
+            {
+                "heading": "Regex",
+                "code": "/^[a-z]+$/i.test(str)"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "HTML",
+        "description": "Complete HTML cheatsheet",
+        "sections": [
+            {
+                "heading": "Basic Structure",
+                "code": "<!DOCTYPE html>"
+            },
+            {
+                "heading": "Heading",
+                "code": "<h1>Hello</h1>"
+            },
+            {
+                "heading": "Paragraph",
+                "code": "<p>Text</p>"
+            },
+            {
+                "heading": "Anchor Tag",
+                "code": "<a href='#'>Link</a>"
+            },
+            {
+                "heading": "Image",
+                "code": "<img src='img.jpg' alt='image' />"
+            },
+            {
+                "heading": "Form",
+                "code": "<form></form>"
+            },
+            {
+                "heading": "Input",
+                "code": "<input type='text' />"
+            },
+            {
+                "heading": "Button",
+                "code": "<button>Click</button>"
+            },
+            {
+                "heading": "Table",
+                "code": "<table><tr><td>Data</td></tr></table>"
+            },
+            {
+                "heading": "Semantic Tags",
+                "code": "<header> <main> <footer>"
+            },
+            {
+                "heading": "Audio",
+                "code": "<audio controls></audio>"
+            },
+            {
+                "heading": "Video",
+                "code": "<video controls></video>"
+            },
+            {
+                "heading": "Iframe",
+                "code": "<iframe src=''></iframe>"
+            },
+            {
+                "heading": "Meta Tag",
+                "code": "<meta charset='UTF-8'>"
+            },
+            {
+                "heading": "SEO Title",
+                "code": "<title>My Website</title>"
+            },
+            {
+                "heading": "Div",
+                "code": "<div class='container'></div>"
+            },
+            {
+                "heading": "Span",
+                "code": "<span>Inline text</span>"
+            },
+            {
+                "heading": "List",
+                "code": "<ul><li>Item</li></ul>"
+            },
+            {
+                "heading": "Ordered List",
+                "code": "<ol><li>Item</li></ol>"
+            },
+            {
+                "heading": "Select Dropdown",
+                "code": "<select><option>A</option></select>"
+            },
+            {
+                "heading": "Textarea",
+                "code": "<textarea rows='4'></textarea>"
+            },
+            {
+                "heading": "Label",
+                "code": "<label for='name'>Name</label>"
+            },
+            {
+                "heading": "Checkbox",
+                "code": "<input type='checkbox' />"
+            },
+            {
+                "heading": "Radio Button",
+                "code": "<input type='radio' />"
+            },
+            {
+                "heading": "Data Attributes",
+                "code": "<div data-id='1'></div>"
+            },
+            {
+                "heading": "Canvas",
+                "code": "<canvas id='myCanvas'></canvas>"
+            },
+            {
+                "heading": "Script Tag",
+                "code": "<script src='app.js'></script>"
+            },
+            {
+                "heading": "Link CSS",
+                "code": "<link rel='stylesheet' href='style.css'>"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "CSS",
+        "description": "Complete CSS cheatsheet",
+        "sections": [
+            {
+                "heading": "Color",
+                "code": "color:red"
+            },
+            {
+                "heading": "Background",
+                "code": "background:#000"
+            },
+            {
+                "heading": "Flexbox",
+                "code": "display:flex"
+            },
+            {
+                "heading": "Grid",
+                "code": "display:grid"
+            },
+            {
+                "heading": "Position",
+                "code": "position:absolute"
+            },
+            {
+                "heading": "Media Query",
+                "code": "@media(max-width:768px){}"
+            },
+            {
+                "heading": "Transition",
+                "code": "transition:0.3s"
+            },
+            {
+                "heading": "Transform",
+                "code": "transform:scale(1.1)"
+            },
+            {
+                "heading": "Animation",
+                "code": "@keyframes slide{}"
+            },
+            {
+                "heading": "Box Shadow",
+                "code": "box-shadow:0 0 10px #000"
+            },
+            {
+                "heading": "Border Radius",
+                "code": "border-radius:10px"
+            },
+            {
+                "heading": "Overflow",
+                "code": "overflow:hidden"
+            },
+            {
+                "heading": "Z Index",
+                "code": "z-index:999"
+            },
+            {
+                "heading": "Pseudo Class",
+                "code": ":hover{}"
+            },
+            {
+                "heading": "Responsive Layout",
+                "code": "width:100%"
+            },
+            {
+                "heading": "CSS Variables",
+                "code": "--primary:#00d4ff"
+            },
+            {
+                "heading": "Flex Center",
+                "code": "justify-content:center; align-items:center"
+            },
+            {
+                "heading": "Grid Columns",
+                "code": "grid-template-columns:repeat(3,1fr)"
+            },
+            {
+                "heading": "Gap",
+                "code": "gap:16px"
+            },
+            {
+                "heading": "Object Fit",
+                "code": "object-fit:cover"
+            },
+            {
+                "heading": "Gradient",
+                "code": "background:linear-gradient(135deg,#f00,#00f)"
+            },
+            {
+                "heading": "Clip Path",
+                "code": "clip-path:circle(50%)"
+            },
+            {
+                "heading": "Backdrop Filter",
+                "code": "backdrop-filter:blur(10px)"
+            },
+            {
+                "heading": "CSS Grid Area",
+                "code": "grid-area:header"
+            },
+            {
+                "heading": "Sticky",
+                "code": "position:sticky; top:0"
+            },
+            {
+                "heading": "Pseudo Element",
+                "code": "::before { content:'' }"
+            },
+            {
+                "heading": "Calc",
+                "code": "width:calc(100% - 60px)"
+            },
+            {
+                "heading": "Aspect Ratio",
+                "code": "aspect-ratio:16/9"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "TypeScript",
+        "description": "Complete TypeScript cheatsheet",
+        "sections": [
+            {
+                "heading": "Type",
+                "code": "let age:number = 20"
+            },
+            {
+                "heading": "String",
+                "code": "let name:string = 'Sandeep'"
+            },
+            {
+                "heading": "Boolean",
+                "code": "let isLogin:boolean = true"
+            },
+            {
+                "heading": "Array",
+                "code": "let users:string[] = []"
+            },
+            {
+                "heading": "Tuple",
+                "code": "let user:[string,number]"
+            },
+            {
+                "heading": "Enum",
+                "code": "enum Role {ADMIN,USER}"
+            },
+            {
+                "heading": "Interface",
+                "code": "interface User {name:string}"
+            },
+            {
+                "heading": "Type Alias",
+                "code": "type User = {name:string}"
+            },
+            {
+                "heading": "Union Type",
+                "code": "let id:string | number"
+            },
+            {
+                "heading": "Generics",
+                "code": "function test<T>(data:T){}"
+            },
+            {
+                "heading": "Optional Property",
+                "code": "name?:string"
+            },
+            {
+                "heading": "Readonly",
+                "code": "readonly id:number"
+            },
+            {
+                "heading": "Function Type",
+                "code": "const add:(a:number,b:number)=>number"
+            },
+            {
+                "heading": "Class",
+                "code": "class User{}"
+            },
+            {
+                "heading": "Extends",
+                "code": "interface Admin extends User{}"
+            },
+            {
+                "heading": "Intersection Type",
+                "code": "type AdminUser = Admin & User"
+            },
+            {
+                "heading": "Type Assertion",
+                "code": "const input = e.target as HTMLInputElement"
+            },
+            {
+                "heading": "keyof",
+                "code": "type Keys = keyof User"
+            },
+            {
+                "heading": "Partial",
+                "code": "Partial<User>"
+            },
+            {
+                "heading": "Required",
+                "code": "Required<User>"
+            },
+            {
+                "heading": "Pick",
+                "code": "Pick<User, 'name' | 'email'>"
+            },
+            {
+                "heading": "Omit",
+                "code": "Omit<User, 'password'>"
+            },
+            {
+                "heading": "Record",
+                "code": "Record<string, number>"
+            },
+            {
+                "heading": "Non Null Assertion",
+                "code": "document.getElementById('app')!"
+            },
+            {
+                "heading": "Decorators",
+                "code": "@Component({})"
+            },
+            {
+                "heading": "Utility Types",
+                "code": "Partial | Required | Pick | Omit | Record"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Node.js",
+        "description": "Complete Node.js cheatsheet",
+        "sections": [
+            {
+                "heading": "Init Project",
+                "code": "npm init -y"
+            },
+            {
+                "heading": "Install Express",
+                "code": "npm install express"
+            },
+            {
+                "heading": "Create Server",
+                "code": "const app = express()"
+            },
+            {
+                "heading": "Listen Server",
+                "code": "app.listen(5000)"
+            },
+            {
+                "heading": "GET API",
+                "code": "app.get('/users',(req,res)=>{})"
+            },
+            {
+                "heading": "POST API",
+                "code": "app.post('/users',(req,res)=>{})"
+            },
+            {
+                "heading": "PUT API",
+                "code": "app.put('/users/:id',(req,res)=>{})"
+            },
+            {
+                "heading": "DELETE API",
+                "code": "app.delete('/users/:id',(req,res)=>{})"
+            },
+            {
+                "heading": "Middleware",
+                "code": "app.use(express.json())"
+            },
+            {
+                "heading": "Route Params",
+                "code": "req.params.id"
+            },
+            {
+                "heading": "Query Params",
+                "code": "req.query.search"
+            },
+            {
+                "heading": "Environment Variables",
+                "code": "process.env.PORT"
+            },
+            {
+                "heading": "JWT Sign",
+                "code": "jwt.sign(payload,secret)"
+            },
+            {
+                "heading": "JWT Verify",
+                "code": "jwt.verify(token,secret)"
+            },
+            {
+                "heading": "bcrypt",
+                "code": "bcrypt.hash(password,10)"
+            },
+            {
+                "heading": "CORS",
+                "code": "app.use(cors())"
+            },
+            {
+                "heading": "Mongoose Connect",
+                "code": "mongoose.connect(DB_URL)"
+            },
+            {
+                "heading": "MVC Structure",
+                "code": "controllers/ models/ routes/"
+            },
+            {
+                "heading": "File System",
+                "code": "fs.readFileSync('file.txt','utf8')"
+            },
+            {
+                "heading": "Path Module",
+                "code": "path.join(__dirname,'file')"
+            },
+            {
+                "heading": "Error Handling",
+                "code": "app.use((err,req,res,next)=>{})"
+            },
+            {
+                "heading": "dotenv",
+                "code": "require('dotenv').config()"
+            },
+            {
+                "heading": "Multer Upload",
+                "code": "multer({ dest:'uploads/' })"
+            },
+            {
+                "heading": "Rate Limiting",
+                "code": "rateLimit({ windowMs:15*60*1000 })"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "MongoDB",
+        "description": "Complete MongoDB cheatsheet",
+        "sections": [
+            {
+                "heading": "Insert One",
+                "code": "db.users.insertOne({name:'Sandeep'})"
+            },
+            {
+                "heading": "Insert Many",
+                "code": "db.users.insertMany([{},{} ])"
+            },
+            {
+                "heading": "Find",
+                "code": "db.users.find()"
+            },
+            {
+                "heading": "Find One",
+                "code": "db.users.findOne({_id:id})"
+            },
+            {
+                "heading": "Update",
+                "code": "db.users.updateOne({},{$set:{name:'Ram'}})"
+            },
+            {
+                "heading": "Update Many",
+                "code": "db.users.updateMany({},{$set:{active:true}})"
+            },
+            {
+                "heading": "Delete",
+                "code": "db.users.deleteOne({_id:id})"
+            },
+            {
+                "heading": "Delete Many",
+                "code": "db.users.deleteMany({active:false})"
+            },
+            {
+                "heading": "Sort",
+                "code": "db.users.find().sort({name:1})"
+            },
+            {
+                "heading": "Limit",
+                "code": "db.users.find().limit(5)"
+            },
+            {
+                "heading": "Skip",
+                "code": "db.users.find().skip(10)"
+            },
+            {
+                "heading": "Count",
+                "code": "db.users.countDocuments({})"
+            },
+            {
+                "heading": "Aggregation",
+                "code": "db.users.aggregate([])"
+            },
+            {
+                "heading": "Lookup",
+                "code": "$lookup:{}"
+            },
+            {
+                "heading": "Match",
+                "code": "$match:{ age:{ $gt:18 } }"
+            },
+            {
+                "heading": "Group",
+                "code": "$group:{ _id:'$city', count:{$sum:1} }"
+            },
+            {
+                "heading": "Index",
+                "code": "db.users.createIndex({email:1})"
+            },
+            {
+                "heading": "Schema",
+                "code": "new mongoose.Schema({})"
+            },
+            {
+                "heading": "Model",
+                "code": "mongoose.model('User',schema)"
+            },
+            {
+                "heading": "Populate",
+                "code": "User.find().populate('posts')"
+            },
+            {
+                "heading": "Validation",
+                "code": "required:true"
+            },
+            {
+                "heading": "Virtual Field",
+                "code": "schema.virtual('fullName').get(()=>{})"
+            },
+            {
+                "heading": "Middleware Hook",
+                "code": "schema.pre('save', async function(){})"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Next.js",
+        "description": "Complete Next.js cheatsheet",
+        "sections": [
+            {
+                "heading": "Create App",
+                "code": "npx create-next-app@latest"
+            },
+            {
+                "heading": "Pages Routing",
+                "code": "pages/index.js"
+            },
+            {
+                "heading": "App Router",
+                "code": "app/page.js"
+            },
+            {
+                "heading": "Dynamic Route",
+                "code": "[id]/page.js"
+            },
+            {
+                "heading": "Link",
+                "code": "<Link href='/about'>About</Link>"
+            },
+            {
+                "heading": "useRouter",
+                "code": "const router = useRouter()"
+            },
+            {
+                "heading": "SSR",
+                "code": "getServerSideProps()"
+            },
+            {
+                "heading": "SSG",
+                "code": "getStaticProps()"
+            },
+            {
+                "heading": "ISR",
+                "code": "revalidate: 60"
+            },
+            {
+                "heading": "API Routes",
+                "code": "pages/api/users.js"
+            },
+            {
+                "heading": "Image Optimization",
+                "code": "<Image src='' width={500} height={500} />"
+            },
+            {
+                "heading": "Metadata",
+                "code": "export const metadata = {}"
+            },
+            {
+                "heading": "Loading UI",
+                "code": "loading.js"
+            },
+            {
+                "heading": "Error UI",
+                "code": "error.js"
+            },
+            {
+                "heading": "Not Found",
+                "code": "not-found.js"
+            },
+            {
+                "heading": "Server Component",
+                "code": "async function Page(){}"
+            },
+            {
+                "heading": "Client Component",
+                "code": "'use client'"
+            },
+            {
+                "heading": "Server Actions",
+                "code": "'use server'"
+            },
+            {
+                "heading": "Middleware",
+                "code": "middleware.js"
+            },
+            {
+                "heading": "Layout",
+                "code": "app/layout.js"
+            },
+            {
+                "heading": "Font Optimization",
+                "code": "import { Inter } from 'next/font/google'"
+            },
+            {
+                "heading": "Environment",
+                "code": "NEXT_PUBLIC_API_URL"
+            },
+            {
+                "heading": "redirect",
+                "code": "import { redirect } from 'next/navigation'"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Redux Toolkit",
+        "description": "Complete Redux Toolkit cheatsheet",
+        "sections": [
+            {
+                "heading": "Install",
+                "code": "npm install @reduxjs/toolkit react-redux"
+            },
+            {
+                "heading": "Configure Store",
+                "code": "configureStore({ reducer:{} })"
+            },
+            {
+                "heading": "Create Slice",
+                "code": "createSlice({ name:'user' })"
+            },
+            {
+                "heading": "Initial State",
+                "code": "initialState:{ users:[] }"
+            },
+            {
+                "heading": "Reducers",
+                "code": "reducers:{ addUser(){} }"
+            },
+            {
+                "heading": "Actions",
+                "code": "export const {addUser} = slice.actions"
+            },
+            {
+                "heading": "useSelector",
+                "code": "useSelector(state => state.user)"
+            },
+            {
+                "heading": "useDispatch",
+                "code": "const dispatch = useDispatch()"
+            },
+            {
+                "heading": "Async Thunk",
+                "code": "createAsyncThunk('users/fetch', async()=>{})"
+            },
+            {
+                "heading": "Extra Reducers",
+                "code": "extraReducers:(builder)=>{}"
+            },
+            {
+                "heading": "Builder addCase",
+                "code": "builder.addCase(fetchUsers.fulfilled,(state,action)=>{})"
+            },
+            {
+                "heading": "Provider",
+                "code": "<Provider store={store}>"
+            },
+            {
+                "heading": "RTK Query",
+                "code": "createApi({})"
+            },
+            {
+                "heading": "Immer",
+                "code": "state.users.push(action.payload)"
+            },
+            {
+                "heading": "Selector",
+                "code": "createSelector([state => state.user], user => user.list)"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Tailwind CSS",
+        "description": "Complete Tailwind CSS cheatsheet",
+        "sections": [
+            {
+                "heading": "Flex Center",
+                "code": "flex items-center justify-center"
+            },
+            {
+                "heading": "Grid",
+                "code": "grid grid-cols-3 gap-4"
+            },
+            {
+                "heading": "Padding",
+                "code": "p-4"
+            },
+            {
+                "heading": "Margin",
+                "code": "m-4"
+            },
+            {
+                "heading": "Text Size",
+                "code": "text-xl"
+            },
+            {
+                "heading": "Font Weight",
+                "code": "font-bold"
+            },
+            {
+                "heading": "Width",
+                "code": "w-full"
+            },
+            {
+                "heading": "Height",
+                "code": "h-screen"
+            },
+            {
+                "heading": "Background",
+                "code": "bg-black"
+            },
+            {
+                "heading": "Text Color",
+                "code": "text-white"
+            },
+            {
+                "heading": "Border Radius",
+                "code": "rounded-xl"
+            },
+            {
+                "heading": "Shadow",
+                "code": "shadow-lg"
+            },
+            {
+                "heading": "Hover",
+                "code": "hover:bg-blue-500"
+            },
+            {
+                "heading": "Responsive",
+                "code": "md:flex lg:grid"
+            },
+            {
+                "heading": "Transition",
+                "code": "transition-all duration-300"
+            },
+            {
+                "heading": "Opacity",
+                "code": "opacity-50"
+            },
+            {
+                "heading": "Cursor",
+                "code": "cursor-pointer"
+            },
+            {
+                "heading": "Overflow",
+                "code": "overflow-hidden"
+            },
+            {
+                "heading": "Absolute Center",
+                "code": "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            },
+            {
+                "heading": "Dark Mode",
+                "code": "dark:bg-gray-900 dark:text-white"
+            },
+            {
+                "heading": "Group Hover",
+                "code": "group-hover:text-blue-500"
+            },
+            {
+                "heading": "Truncate",
+                "code": "truncate"
+            },
+            {
+                "heading": "Ring",
+                "code": "ring-2 ring-blue-500"
+            },
+            {
+                "heading": "Divide",
+                "code": "divide-y divide-gray-200"
+            },
+            {
+                "heading": "Custom Config",
+                "code": "tailwind.config.js"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Git & GitHub",
+        "description": "Complete Git and GitHub cheatsheet",
+        "sections": [
+            {
+                "heading": "Init",
+                "code": "git init"
+            },
+            {
+                "heading": "Clone",
+                "code": "git clone url"
+            },
+            {
+                "heading": "Status",
+                "code": "git status"
+            },
+            {
+                "heading": "Add",
+                "code": "git add ."
+            },
+            {
+                "heading": "Commit",
+                "code": "git commit -m 'message'"
+            },
+            {
+                "heading": "Push",
+                "code": "git push origin main"
+            },
+            {
+                "heading": "Pull",
+                "code": "git pull origin main"
+            },
+            {
+                "heading": "Branch",
+                "code": "git checkout -b dev"
+            },
+            {
+                "heading": "Merge",
+                "code": "git merge dev"
+            },
+            {
+                "heading": "Log",
+                "code": "git log"
+            },
+            {
+                "heading": "Stash",
+                "code": "git stash"
+            },
+            {
+                "heading": "Stash Pop",
+                "code": "git stash pop"
+            },
+            {
+                "heading": "Reset",
+                "code": "git reset --hard"
+            },
+            {
+                "heading": "Revert",
+                "code": "git revert HEAD"
+            },
+            {
+                "heading": "Diff",
+                "code": "git diff"
+            },
+            {
+                "heading": "Remote Add",
+                "code": "git remote add origin url"
+            },
+            {
+                "heading": "Tag",
+                "code": "git tag v1.0.0"
+            },
+            {
+                "heading": "Fetch",
+                "code": "git fetch origin"
+            },
+            {
+                "heading": "Rebase",
+                "code": "git rebase main"
+            },
+            {
+                "heading": "Cherry Pick",
+                "code": "git cherry-pick commitHash"
+            },
+            {
+                "heading": "Amend Commit",
+                "code": "git commit --amend"
+            },
+            {
+                "heading": ".gitignore",
+                "code": "node_modules/"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "SQL",
+        "description": "Complete SQL cheatsheet",
+        "sections": [
+            {
+                "heading": "Select",
+                "code": "SELECT * FROM users"
+            },
+            {
+                "heading": "Where",
+                "code": "SELECT * FROM users WHERE age > 20"
+            },
+            {
+                "heading": "Insert",
+                "code": "INSERT INTO users(name) VALUES('Ram')"
+            },
+            {
+                "heading": "Update",
+                "code": "UPDATE users SET name='Sam'"
+            },
+            {
+                "heading": "Delete",
+                "code": "DELETE FROM users WHERE id=1"
+            },
+            {
+                "heading": "Order By",
+                "code": "SELECT * FROM users ORDER BY name ASC"
+            },
+            {
+                "heading": "Group By",
+                "code": "SELECT count(*) FROM users GROUP BY city"
+            },
+            {
+                "heading": "Inner Join",
+                "code": "SELECT * FROM users INNER JOIN orders"
+            },
+            {
+                "heading": "Left Join",
+                "code": "SELECT * FROM users LEFT JOIN orders"
+            },
+            {
+                "heading": "Limit",
+                "code": "SELECT * FROM users LIMIT 5"
+            },
+            {
+                "heading": "Primary Key",
+                "code": "id INT PRIMARY KEY"
+            },
+            {
+                "heading": "Foreign Key",
+                "code": "FOREIGN KEY(user_id) REFERENCES users(id)"
+            },
+            {
+                "heading": "Create Table",
+                "code": "CREATE TABLE users (id INT, name VARCHAR(100))"
+            },
+            {
+                "heading": "Drop Table",
+                "code": "DROP TABLE users"
+            },
+            {
+                "heading": "Alter Table",
+                "code": "ALTER TABLE users ADD age INT"
+            },
+            {
+                "heading": "Like",
+                "code": "SELECT * FROM users WHERE name LIKE 'S%'"
+            },
+            {
+                "heading": "In",
+                "code": "SELECT * FROM users WHERE id IN (1,2,3)"
+            },
+            {
+                "heading": "Between",
+                "code": "WHERE age BETWEEN 20 AND 30"
+            },
+            {
+                "heading": "Having",
+                "code": "GROUP BY city HAVING count(*) > 5"
+            },
+            {
+                "heading": "Subquery",
+                "code": "WHERE id IN (SELECT id FROM admins)"
+            },
+            {
+                "heading": "Distinct",
+                "code": "SELECT DISTINCT city FROM users"
+            },
+            {
+                "heading": "Aggregate",
+                "code": "COUNT() SUM() AVG() MIN() MAX()"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Docker",
+        "description": "Complete Docker cheatsheet",
+        "sections": [
+            {
+                "heading": "Docker Version",
+                "code": "docker -v"
+            },
+            {
+                "heading": "Pull Image",
+                "code": "docker pull node"
+            },
+            {
+                "heading": "Run Container",
+                "code": "docker run image"
+            },
+            {
+                "heading": "Run Detached",
+                "code": "docker run -d -p 3000:3000 image"
+            },
+            {
+                "heading": "List Containers",
+                "code": "docker ps"
+            },
+            {
+                "heading": "List All",
+                "code": "docker ps -a"
+            },
+            {
+                "heading": "Stop Container",
+                "code": "docker stop id"
+            },
+            {
+                "heading": "Remove Container",
+                "code": "docker rm id"
+            },
+            {
+                "heading": "Remove Image",
+                "code": "docker rmi image"
+            },
+            {
+                "heading": "Docker Build",
+                "code": "docker build -t app ."
+            },
+            {
+                "heading": "Dockerfile",
+                "code": "FROM node:18"
+            },
+            {
+                "heading": "Workdir",
+                "code": "WORKDIR /app"
+            },
+            {
+                "heading": "Copy Files",
+                "code": "COPY . ."
+            },
+            {
+                "heading": "Run Command",
+                "code": "RUN npm install"
+            },
+            {
+                "heading": "Expose Port",
+                "code": "EXPOSE 3000"
+            },
+            {
+                "heading": "Entry Point",
+                "code": "CMD ['node','server.js']"
+            },
+            {
+                "heading": "Docker Compose",
+                "code": "docker-compose up"
+            },
+            {
+                "heading": "Compose Down",
+                "code": "docker-compose down"
+            },
+            {
+                "heading": "Exec Into Container",
+                "code": "docker exec -it id bash"
+            },
+            {
+                "heading": "Logs",
+                "code": "docker logs id"
+            },
+            {
+                "heading": "Volume",
+                "code": "docker run -v /host:/container image"
+            },
+            {
+                "heading": "Network",
+                "code": "docker network create mynet"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Firebase",
+        "description": "Complete Firebase cheatsheet",
+        "sections": [
+            {
+                "heading": "Install",
+                "code": "npm install firebase"
+            },
+            {
+                "heading": "Initialize",
+                "code": "initializeApp(config)"
+            },
+            {
+                "heading": "Authentication",
+                "code": "signInWithEmailAndPassword()"
+            },
+            {
+                "heading": "Google Login",
+                "code": "signInWithPopup(auth,provider)"
+            },
+            {
+                "heading": "Sign Out",
+                "code": "signOut(auth)"
+            },
+            {
+                "heading": "Auth State",
+                "code": "onAuthStateChanged(auth, user=>{})"
+            },
+            {
+                "heading": "Firestore",
+                "code": "getFirestore(app)"
+            },
+            {
+                "heading": "Add Document",
+                "code": "addDoc(collection(db,'users'),{})"
+            },
+            {
+                "heading": "Get Docs",
+                "code": "getDocs(collection(db,'users'))"
+            },
+            {
+                "heading": "Get Doc",
+                "code": "getDoc(doc(db,'users',id))"
+            },
+            {
+                "heading": "Update Doc",
+                "code": "updateDoc(ref,{name:'Ram'})"
+            },
+            {
+                "heading": "Delete Doc",
+                "code": "deleteDoc(doc(db,'users',id))"
+            },
+            {
+                "heading": "Real Time Listener",
+                "code": "onSnapshot(ref, snapshot=>{})"
+            },
+            {
+                "heading": "Query",
+                "code": "query(collection(db,'users'), where('age','>',18))"
+            },
+            {
+                "heading": "Storage",
+                "code": "getStorage(app)"
+            },
+            {
+                "heading": "Upload File",
+                "code": "uploadBytes(ref, file)"
+            },
+            {
+                "heading": "Get Download URL",
+                "code": "getDownloadURL(ref)"
+            },
+            {
+                "heading": "Hosting",
+                "code": "firebase deploy"
+            },
+            {
+                "heading": "Realtime DB",
+                "code": "getDatabase(app)"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "GraphQL",
+        "description": "Complete GraphQL cheatsheet",
+        "sections": [
+            {
+                "heading": "Query",
+                "code": "query { users { name } }"
+            },
+            {
+                "heading": "Mutation",
+                "code": "mutation { addUser(name:'Ram') }"
+            },
+            {
+                "heading": "Subscription",
+                "code": "subscription { newMessage { text } }"
+            },
+            {
+                "heading": "Schema",
+                "code": "type User { id:ID name:String }"
+            },
+            {
+                "heading": "Resolver",
+                "code": "const resolvers = {}"
+            },
+            {
+                "heading": "Apollo Server",
+                "code": "new ApolloServer({})"
+            },
+            {
+                "heading": "Apollo Client",
+                "code": "new ApolloClient({})"
+            },
+            {
+                "heading": "useQuery",
+                "code": "useQuery(GET_USERS)"
+            },
+            {
+                "heading": "useMutation",
+                "code": "useMutation(ADD_USER)"
+            },
+            {
+                "heading": "Query Variables",
+                "code": "query GetUser($id: ID!) { user(id: $id) {} }"
+            },
+            {
+                "heading": "Fragments",
+                "code": "fragment UserFields on User { name email }"
+            },
+            {
+                "heading": "Introspection",
+                "code": "{ __schema { types { name } } }"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Linux",
+        "description": "Complete Linux cheatsheet",
+        "sections": [
+            {
+                "heading": "List Files",
+                "code": "ls -la"
+            },
+            {
+                "heading": "Change Directory",
+                "code": "cd folder"
+            },
+            {
+                "heading": "Create File",
+                "code": "touch file.txt"
+            },
+            {
+                "heading": "Remove File",
+                "code": "rm file.txt"
+            },
+            {
+                "heading": "Remove Directory",
+                "code": "rm -rf folder"
+            },
+            {
+                "heading": "Copy File",
+                "code": "cp a.txt b.txt"
+            },
+            {
+                "heading": "Move File",
+                "code": "mv a.txt folder"
+            },
+            {
+                "heading": "Current Path",
+                "code": "pwd"
+            },
+            {
+                "heading": "Make Directory",
+                "code": "mkdir project"
+            },
+            {
+                "heading": "Clear Terminal",
+                "code": "clear"
+            },
+            {
+                "heading": "Node Version",
+                "code": "node -v"
+            },
+            {
+                "heading": "Read File",
+                "code": "cat file.txt"
+            },
+            {
+                "heading": "Search File",
+                "code": "grep 'text' file.txt"
+            },
+            {
+                "heading": "Find File",
+                "code": "find . -name '*.js'"
+            },
+            {
+                "heading": "Permissions",
+                "code": "chmod 755 file.sh"
+            },
+            {
+                "heading": "Process List",
+                "code": "ps aux"
+            },
+            {
+                "heading": "Kill Process",
+                "code": "kill -9 PID"
+            },
+            {
+                "heading": "Disk Usage",
+                "code": "df -h"
+            },
+            {
+                "heading": "Memory Usage",
+                "code": "free -h"
+            },
+            {
+                "heading": "Ping",
+                "code": "ping google.com"
+            },
+            {
+                "heading": "SSH",
+                "code": "ssh user@ip"
+            },
+            {
+                "heading": "SCP Transfer",
+                "code": "scp file.txt user@ip:/path"
+            },
+            {
+                "heading": "Cron Job",
+                "code": "crontab -e"
+            },
+            {
+                "heading": "Environment Var",
+                "code": "export PORT=3000"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title": "DSA",
+        "description": "Complete DSA cheatsheet",
+        "sections": [
+            {
+                "heading": "Array",
+                "code": "let arr = [1,2,3]"
+            },
+            {
+                "heading": "Stack",
+                "code": "LIFO - Last In First Out"
+            },
+            {
+                "heading": "Queue",
+                "code": "FIFO - First In First Out"
+            },
+            {
+                "heading": "Linked List",
+                "code": "Node -> Node -> null"
+            },
+            {
+                "heading": "Binary Search",
+                "code": "O(log n)"
+            },
+            {
+                "heading": "Linear Search",
+                "code": "O(n)"
+            },
+            {
+                "heading": "Bubble Sort",
+                "code": "O(n^2)"
+            },
+            {
+                "heading": "Merge Sort",
+                "code": "O(n log n)"
+            },
+            {
+                "heading": "Quick Sort",
+                "code": "O(n log n) avg"
+            },
+            {
+                "heading": "Recursion",
+                "code": "function test(){ return test() }"
+            },
+            {
+                "heading": "Tree",
+                "code": "Root -> Left Child, Right Child"
+            },
+            {
+                "heading": "Binary Tree",
+                "code": "Each node has at most 2 children"
+            },
+            {
+                "heading": "BST",
+                "code": "Left < Root < Right"
+            },
+            {
+                "heading": "Graph",
+                "code": "Vertices + Edges"
+            },
+            {
+                "heading": "DFS",
+                "code": "Depth First Search - Stack"
+            },
+            {
+                "heading": "BFS",
+                "code": "Breadth First Search - Queue"
+            },
+            {
+                "heading": "Dynamic Programming",
+                "code": "Memoization + Tabulation"
+            },
+            {
+                "heading": "Sliding Window",
+                "code": "O(n) for subarray problems"
+            },
+            {
+                "heading": "Two Pointers",
+                "code": "left=0; right=arr.length-1"
+            },
+            {
+                "heading": "HashMap",
+                "code": "const map = new Map()"
+            },
+            {
+                "heading": "Heap",
+                "code": "Min Heap / Max Heap"
+            },
+            {
+                "heading": "Big O Notation",
+                "code": "O(1) O(n) O(n^2) O(log n)"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Python",
+        "description": "Complete Python cheatsheet",
+        "sections": [
+            {
+                "heading": "Print",
+                "code": "print('Hello World')"
+            },
+            {
+                "heading": "Variables",
+                "code": "name = 'Sandeep'"
+            },
+            {
+                "heading": "List",
+                "code": "arr = [1, 2, 3]"
+            },
+            {
+                "heading": "Tuple",
+                "code": "t = (1, 2, 3)"
+            },
+            {
+                "heading": "Dictionary",
+                "code": "user = {'name': 'Ram', 'age': 20}"
+            },
+            {
+                "heading": "Set",
+                "code": "s = {1, 2, 3}"
+            },
+            {
+                "heading": "If Else",
+                "code": "if x > 0:\n  print('positive')"
+            },
+            {
+                "heading": "For Loop",
+                "code": "for i in range(10):\n  print(i)"
+            },
+            {
+                "heading": "While Loop",
+                "code": "while x > 0:\n  x -= 1"
+            },
+            {
+                "heading": "Function",
+                "code": "def greet(name):\n  return f'Hello {name}'"
+            },
+            {
+                "heading": "Lambda",
+                "code": "add = lambda a,b: a+b"
+            },
+            {
+                "heading": "List Comprehension",
+                "code": "[x*2 for x in arr]"
+            },
+            {
+                "heading": "Class",
+                "code": "class User:\n  def __init__(self, name):\n    self.name = name"
+            },
+            {
+                "heading": "Inheritance",
+                "code": "class Admin(User):"
+            },
+            {
+                "heading": "Try Except",
+                "code": "try:\n  pass\nexcept Exception as e:\n  print(e)"
+            },
+            {
+                "heading": "File Read",
+                "code": "with open('file.txt','r') as f:"
+            },
+            {
+                "heading": "Import",
+                "code": "import os\nimport json"
+            },
+            {
+                "heading": "Map Filter",
+                "code": "list(map(lambda x:x*2, arr))"
+            },
+            {
+                "heading": "Sorted",
+                "code": "sorted(arr, reverse=True)"
+            },
+            {
+                "heading": "Enumerate",
+                "code": "for i, val in enumerate(arr):"
+            },
+            {
+                "heading": "Zip",
+                "code": "for a,b in zip(list1, list2):"
+            },
+            {
+                "heading": "Args Kwargs",
+                "code": "def func(*args, **kwargs):"
+            },
+            {
+                "heading": "Decorator",
+                "code": "@decorator\ndef func():"
+            },
+            {
+                "heading": "Generator",
+                "code": "def gen(): yield 1"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Java",
+        "description": "Complete Java cheatsheets",
+        "sections": [
+            {
+                "heading": "Main Method",
+                "code": "public static void main(String[] args){}"
+            },
+            {
+                "heading": "Print",
+                "code": "System.out.println('Hello');"
+            },
+            {
+                "heading": "Variables",
+                "code": "int age = 20;"
+            },
+            {
+                "heading": "String",
+                "code": "String name = 'Sandeep';"
+            },
+            {
+                "heading": "Array",
+                "code": "int[] arr = {1,2,3};"
+            },
+            {
+                "heading": "ArrayList",
+                "code": "ArrayList<String> list = new ArrayList<>();"
+            },
+            {
+                "heading": "If Else",
+                "code": "if(x > 0){ } else { }"
+            },
+            {
+                "heading": "For Loop",
+                "code": "for(int i=0; i<10; i++){}"
+            },
+            {
+                "heading": "For Each",
+                "code": "for(String item : list){}"
+            },
+            {
+                "heading": "While Loop",
+                "code": "while(x > 0){ x--; }"
+            },
+            {
+                "heading": "Method",
+                "code": "public int add(int a, int b){ return a+b; }"
+            },
+            {
+                "heading": "Class",
+                "code": "public class User { }"
+            },
+            {
+                "heading": "Constructor",
+                "code": "public User(String name){ this.name = name; }"
+            },
+            {
+                "heading": "Inheritance",
+                "code": "class Admin extends User{}"
+            },
+            {
+                "heading": "Interface",
+                "code": "interface Printable { void print(); }"
+            },
+            {
+                "heading": "Abstract Class",
+                "code": "abstract class Shape{}"
+            },
+            {
+                "heading": "Try Catch",
+                "code": "try{ } catch(Exception e){ }"
+            },
+            {
+                "heading": "HashMap",
+                "code": "HashMap<String,Integer> map = new HashMap<>();"
+            },
+            {
+                "heading": "Lambda",
+                "code": "list.forEach(item -> System.out.println(item));"
+            },
+            {
+                "heading": "Stream API",
+                "code": "list.stream().filter(x->x>0).collect(Collectors.toList())"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "title": "C++",
+        "description": "Complete C++ cheatsheet",
+        "sections": [
+            {
+                "heading": "Hello World",
+                "code": "cout << 'Hello World';"
+            },
+            {
+                "heading": "Include",
+                "code": "#include <iostream>"
+            },
+            {
+                "heading": "Namespace",
+                "code": "using namespace std;"
+            },
+            {
+                "heading": "Main",
+                "code": "int main(){ return 0; }"
+            },
+            {
+                "heading": "Variables",
+                "code": "int x = 10;"
+            },
+            {
+                "heading": "String",
+                "code": "string name = 'Sandeep';"
+            },
+            {
+                "heading": "Array",
+                "code": "int arr[] = {1,2,3};"
+            },
+            {
+                "heading": "Vector",
+                "code": "vector<int> v = {1,2,3};"
+            },
+            {
+                "heading": "If Else",
+                "code": "if(x>0){ } else{ }"
+            },
+            {
+                "heading": "For Loop",
+                "code": "for(int i=0; i<10; i++){}"
+            },
+            {
+                "heading": "While Loop",
+                "code": "while(x>0){ x--; }"
+            },
+            {
+                "heading": "Function",
+                "code": "int add(int a, int b){ return a+b; }"
+            },
+            {
+                "heading": "Pointer",
+                "code": "int* ptr = &x;"
+            },
+            {
+                "heading": "Reference",
+                "code": "int& ref = x;"
+            },
+            {
+                "heading": "Class",
+                "code": "class User { public: string name; };"
+            },
+            {
+                "heading": "Constructor",
+                "code": "User(string n){ name = n; }"
+            },
+            {
+                "heading": "Inheritance",
+                "code": "class Admin : public User{}"
+            },
+            {
+                "heading": "Template",
+                "code": "template<typename T> T add(T a, T b){}"
+            },
+            {
+                "heading": "STL Map",
+                "code": "map<string,int> m;"
+            },
+            {
+                "heading": "STL Sort",
+                "code": "sort(v.begin(), v.end());"
+            }
+        ]
+    }
+]
